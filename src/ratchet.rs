@@ -134,7 +134,6 @@ impl RatchetHeader {
 #[derive(Serialize, Deserialize, Zeroize, ZeroizeOnDrop)]
 pub struct RatchetState {
     // Diffie-Hellman Ratchet
-    #[zeroize(skip)]
     pub(crate) dh_pair: KeyPair,
     #[zeroize(skip)]
     pub(crate) dh_remote: Option<DhPublicKey>,
